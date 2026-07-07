@@ -22,3 +22,9 @@ It demonstrates real algorithm implementation (not just calling a library), stat
 
 ## Run locally
 Just open `index.html` in a browser.
+
+## Deploy on GitHub Pages
+1. Create a repo (e.g. `pathfinder-visualizer`)
+2. Upload `index.html`, `style.css`, and `script.js` to the repo root
+3. Settings → Pages → serve from the `main` branch
+4. Live at `https://<your-username>.github.io/pathfinder-visualizer`

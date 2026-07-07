@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Pathfinder — Algorithm Visualizer</title>
+<meta name="description" content="Interactive visualizer for BFS, DFS, Dijkstra and A* pathfinding algorithms">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="topbar">
+  <div class="brand">
+    <span class="brand-mark"></span>
+    <span class="brand-name">Pathfinder</span>
+  </div>
+
+  <div class="controls">
+    <label class="control">
+      <span class="control-label">Algorithm</span>
+      <select id="algoSelect">
+        <option value="astar">A* Search</option>
+        <option value="dijkstra">Dijkstra</option>
+        <option value="bfs">Breadth-First Search</option>
+        <option value="dfs">Depth-First Search</option>
+      </select>
+    </label>
+
+    <label class="control">
+      <span class="control-label">Speed</span>
+      <select id="speedSelect">
+        <option value="10">Fast</option>
+        <option value="25" selected>Medium</option>
+        <option value="55">Slow</option>
+      </select>
+    </label>
+
+    <button class="btn btn-primary" id="visualizeBtn">Visualize</button>
+    <button class="btn" id="mazeBtn">Generate maze</button>
+    <button class="btn" id="clearPathBtn">Clear path</button>
+    <button class="btn" id="clearBtn">Clear board</button>
+  </div>
+</header>
+
+<div class="legend">
+  <span class="legend-item"><i class="swatch start"></i>Start</span>
+  <span class="legend-item"><i class="swatch end"></i>End</span>
+  <span class="legend-item"><i class="swatch wall"></i>Wall</span>
+  <span class="legend-item"><i class="swatch visited"></i>Explored</span>
+  <span class="legend-item"><i class="swatch path"></i>Shortest path</span>
+  <span class="legend-hint">click + drag to draw walls · drag start/end nodes to move them</span>
+</div>
+
+<main class="board-wrap">
+  <div id="grid" class="grid"></div>
+</main>
+
+<div class="stats" id="stats">
+  <div class="stat"><span class="stat-num" id="statVisited">0</span><span class="stat-label">nodes explored</span></div>
+  <div class="stat"><span class="stat-num" id="statPath">0</span><span class="stat-label">path length</span></div>
+  <div class="stat"><span class="stat-num" id="statTime">0ms</span><span class="stat-label">time</span></div>
+  <div class="stat" id="statResult"><span class="stat-num">—</span><span class="stat-label">result</span></div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
