@@ -21,7 +21,7 @@ It demonstrates real algorithm implementation (not just calling a library), stat
 - `script.js` — grid logic, all four algorithms, and animation engine
 
 ## Run locally
-Just open `index.html` in a browser.
+Just open `index.html` in a browser. 
 
 ## Deploy on GitHub Pages
 1. Create a repo (e.g. `pathfinder-visualizer`)
